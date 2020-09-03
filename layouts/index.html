@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ .Title }}</title>
+  {{ $cssReset := resources.Get "css/reset.css" }}
+  <link rel="stylesheet" href="{{ $cssReset.RelPermalink }}">
 </head>
 <body>
   <h1>{{ .Title }}</h1>
