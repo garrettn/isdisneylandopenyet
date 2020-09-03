@@ -5,6 +5,8 @@
   <title>{{ .Title }}</title>
   {{ $cssReset := resources.Get "css/reset.css" }}
   <link rel="stylesheet" href="{{ $cssReset.RelPermalink }}">
+  {{ $cssBase := resources.Get "css/base.css" }}
+  <link rel="stylesheet" href="{{ $cssBase.RelPermalink }}">
 </head>
 <body>
   <h1>{{ .Title }}</h1>
