@@ -7,5 +7,12 @@
 <body>
   <h1>{{ .Title }}</h1>
   <p>{{ .Summary }}</p>
+  <section>
+    {{ range where .Site.Pages "Section" "experiences" }}
+      <article>
+        <h2>{{ .Title }}</h2>
+      </article>
+    {{ end }}
+  </section>
 </body>
 </html>
