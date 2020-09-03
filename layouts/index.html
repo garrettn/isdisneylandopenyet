@@ -7,13 +7,17 @@
   <link rel="stylesheet" href="{{ $cssReset.RelPermalink }}">
   {{ $cssBase := resources.Get "css/base.css" }}
   <link rel="stylesheet" href="{{ $cssBase.RelPermalink }}">
+  {{ $cssSite := resources.Get "css/site.css" }}
+  <link rel="stylesheet" href="{{ $cssSite.RelPermalink }}">
 </head>
 <body>
-  <h1>{{ .Title }}</h1>
-  <p>{{ .Summary }}</p>
+  <section data-status="{{ anchorize .Params.status }}">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Summary }}</p>
+  </section>
   <section>
     {{ range where .Site.Pages.ByWeight "Section" "experiences" }}
-      <article>
+    <article data-status="{{ anchorize .Params.status }}">
         <h2>{{ .Title }}</h2>
         <p>{{ .Params.status }}</h2>
         {{ with .Params.opendate }}

@@ -1,0 +1,26 @@
+/**
+ * Composition styles
+ */
+
+/**
+ * Utility styles
+ */
+
+/**
+ * Block styles
+ */
+
+/**
+ * Exception styles
+ */
+[data-status="open"] {
+  background-color: #C6F6D5;
+}
+
+[data-status="partially-open"] {
+  background-color: #FEFCBF;
+}
+
+[data-status="closed"] {
+  background-color: #FED7D7;
+}
