@@ -11,6 +11,16 @@
     {{ range where .Site.Pages.ByWeight "Section" "experiences" }}
       <article>
         <h2>{{ .Title }}</h2>
+        <p>{{ .Params.status }}</h2>
+        {{ with .Params.opendate }}
+          {{ $prefix := "Opening date" }}
+          {{ if gt (time .) now }}
+            {{ $prefix = "Anticipated opening date" }}
+          {{ end }}
+          <p>{{ $prefix }}: <time datetime="{{ . }}">{{ dateFormat "Jan 2, 2006" . }}</time></p>
+        {{ else }}
+          <p>Opening date: None announced</p>
+        {{ end }}
       </article>
     {{ end }}
   </section>
