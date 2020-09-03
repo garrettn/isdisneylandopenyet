@@ -25,5 +25,10 @@
       </article>
     {{ end }}
   </section>
+  <footer>
+    {{ with .Site.GetPage "/disclaimer" }}
+      {{ .Content }}
+    {{ end }}
+  </footer>
 </body>
 </html>
