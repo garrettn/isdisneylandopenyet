@@ -25,7 +25,7 @@
   font-weight: bold;
 }
 
-.details-link {
+.button {
   align-items: center;
   background-color: #2C7A7B;
   box-shadow: 5px 5px rgba(0,0,0,0.6);
@@ -34,10 +34,13 @@
   display: inline-flex;
   font-size: var(--step--1);
   font-weight: bold;
-  margin-top: var(--step-1);
-  padding: var(--step--1) var(--step-0);
+  padding: var(--step--2) var(--step--1);
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.details-link {
+  margin-top: var(--step-1);
 }
 
 .details-link > img {

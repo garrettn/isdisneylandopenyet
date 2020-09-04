@@ -16,7 +16,7 @@
     <h1>{{ .Title }}</h1>
     <p class="summary">{{ .Summary }}</p>
     {{ $iconChevron := resources.Get "icons/chevron-down.svg" }}
-    <a href="#details" class="details-link">
+    <a href="#details" class="details-link | button">
       See details
       <img src="{{ $iconChevron.RelPermalink }}" alt="" class="details-link__icon">
     </a>
@@ -35,7 +35,7 @@
         {{ else }}
           <p>Opening date: None announced</p>
         {{ end }}
-        <p><a href="{{ .Params.info }}">More info</a></p>
+        <p><a href="{{ .Params.info }}" class="button">More info</a></p>
       </article>
     {{ end }}
   </section>
