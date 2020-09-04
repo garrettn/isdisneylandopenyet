@@ -51,12 +51,19 @@
 .experience {
   align-items: flex-start;
   display: flex;
+  flex-flow: row wrap;
+  gap: var(--step-0);
   padding: var(--step-0);
 }
 
 .photo {
   border-radius: 1em;
-  margin-right: var(--step-0);
+}
+
+.status {
+  font-size: var(--step-4);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /**

@@ -29,7 +29,7 @@
         {{ end }}
         <div>
           <h2>{{ .Title }}</h2>
-          <p>{{ .Params.status }}</h2>
+          <p class="status">{{ .Params.status }}</h2>
           {{ with .Params.opendate }}
             {{ $prefix := "Opening date" }}
             {{ if gt (time .) now }}
