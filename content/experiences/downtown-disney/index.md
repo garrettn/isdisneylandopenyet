@@ -5,5 +5,12 @@ weight: 3
 status: open
 opendate: 2020-07-09
 info: https://disneyland.disney.go.com/experience-updates/downtown-disney/
+resources:
+- name: photo
+  src: downtown-disney-fountain.jpg
+  title: Fountain in Downtown Disney
+  params:
+    author: Patrick Pelletier
+    link: https://commons.wikimedia.org/wiki/File:Downtown_Disney_2014_Fountain_Build_a_Bear.JPG
 ---
 

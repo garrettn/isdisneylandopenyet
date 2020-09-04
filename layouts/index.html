@@ -24,6 +24,9 @@
   <section id="details">
     {{ range where .Site.Pages.ByWeight "Section" "experiences" }}
     <article data-status="{{ anchorize .Params.status }}">
+        {{ with .Resources.GetMatch "photo" }}
+        <img src="{{ .Permalink }}" alt="{{ .Title }}">
+        {{ end }}
         <h2>{{ .Title }}</h2>
         <p>{{ .Params.status }}</h2>
         {{ with .Params.opendate }}

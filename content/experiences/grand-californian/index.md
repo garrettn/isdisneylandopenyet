@@ -4,5 +4,12 @@ date: 2020-09-02T22:29:30-06:00
 weight: 4
 status: closed
 info: https://disneyland.disney.go.com/hotels/grand-californian-hotel/
+resources:
+- name: photo
+  src: grand-californian.jpg
+  title: The Grand Californian Hotel
+  params:
+    author: Jack Miller
+    link: https://commons.wikimedia.org/wiki/File:2006_Grand_Californian.jpg
 ---
 
