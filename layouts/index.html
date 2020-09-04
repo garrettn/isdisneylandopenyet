@@ -47,10 +47,14 @@
       </article>
     {{ end }}
   </section>
-  <footer class="disclaimer">
+  <footer>
     {{ with .Site.GetPage "/disclaimer" }}
       {{ .Content }}
     {{ end }}
+    <p class="meta-info">
+      Last updated {{ now.Format "Jan 2, 2006" }}.
+      <a href="{{ .Site.Params.repo }}">View source</a>.
+    </p>
   </footer>
 </body>
 </html>
