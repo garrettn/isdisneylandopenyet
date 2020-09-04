@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ .Title }}</title>
   {{ $cssReset := resources.Get "css/reset.css" }}
   <link rel="stylesheet" href="{{ $cssReset.RelPermalink }}">
@@ -11,11 +12,16 @@
   <link rel="stylesheet" href="{{ $cssSite.RelPermalink }}">
 </head>
 <body>
-  <section data-status="{{ anchorize .Params.status }}">
+  <section class="overview" data-status="{{ anchorize .Params.status }}">
     <h1>{{ .Title }}</h1>
-    <p>{{ .Summary }}</p>
+    <p class="summary">{{ .Summary }}</p>
+    {{ $iconChevron := resources.Get "icons/chevron-down.svg" }}
+    <a href="#details" class="details-link">
+      See details
+      <img src="{{ $iconChevron.RelPermalink }}" alt="" class="details-link__icon">
+    </a>
   </section>
-  <section>
+  <section id="details">
     {{ range where .Site.Pages.ByWeight "Section" "experiences" }}
     <article data-status="{{ anchorize .Params.status }}">
         <h2>{{ .Title }}</h2>
