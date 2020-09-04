@@ -25,7 +25,10 @@
     {{ range where .Site.Pages.ByWeight "Section" "experiences" }}
     <article class="experience" data-status="{{ anchorize .Params.status }}">
         {{ with .Resources.GetMatch "photo" }}
-          <img src="{{ .Permalink }}" alt="{{ .Title }}" class="photo">
+          <figure class="photo">
+            <img src="{{ .Permalink }}" alt="{{ .Title }}">
+            <figcaption>Image credit: <a href="{{ .Params.link }}">{{ .Params.author }}</a></figcaption>
+          </figure>
         {{ end }}
         <h2>{{ .Title }}</h2>
         <p class="status">{{ .Params.status }}</h2>

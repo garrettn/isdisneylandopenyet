@@ -76,8 +76,16 @@
 }
 
 .photo {
-  border-radius: 1em;
   grid-area: photo;
+}
+
+.photo > img {
+  border-radius: 1em;
+}
+
+.photo > figcaption {
+  font-size: var(--step--2);
+  font-style: italic;
 }
 
 .status {
