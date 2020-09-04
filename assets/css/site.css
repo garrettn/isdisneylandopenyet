@@ -50,8 +50,9 @@
 
 .experience {
   align-items: flex-start;
-  gap: var(--step-0);
+  border-top: 1px solid black;
   display: grid;
+  gap: var(--step--2);
   grid-template-areas:
     "name"
     "status"
@@ -60,8 +61,13 @@
   padding: var(--step-0);
 }
 
+.experience:last-child {
+  border-bottom: 1px solid black;
+}
+
 @media screen and (min-width: 1000px) {
   .experience {
+    gap: var(--step-0);
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
       "photo name status"
