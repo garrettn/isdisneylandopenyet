@@ -23,22 +23,24 @@
   </section>
   <section id="details">
     {{ range where .Site.Pages.ByWeight "Section" "experiences" }}
-    <article data-status="{{ anchorize .Params.status }}">
+    <article class="experience" data-status="{{ anchorize .Params.status }}">
         {{ with .Resources.GetMatch "photo" }}
-        <img src="{{ .Permalink }}" alt="{{ .Title }}">
+        <img src="{{ .Permalink }}" alt="{{ .Title }}" class="photo">
         {{ end }}
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Params.status }}</h2>
-        {{ with .Params.opendate }}
-          {{ $prefix := "Opening date" }}
-          {{ if gt (time .) now }}
-            {{ $prefix = "Anticipated opening date" }}
+        <div>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Params.status }}</h2>
+          {{ with .Params.opendate }}
+            {{ $prefix := "Opening date" }}
+            {{ if gt (time .) now }}
+              {{ $prefix = "Anticipated opening date" }}
+            {{ end }}
+            <p>{{ $prefix }}: <time datetime="{{ . }}">{{ dateFormat "Jan 2, 2006" . }}</time></p>
+          {{ else }}
+            <p>Opening date: None announced</p>
           {{ end }}
-          <p>{{ $prefix }}: <time datetime="{{ . }}">{{ dateFormat "Jan 2, 2006" . }}</time></p>
-        {{ else }}
-          <p>Opening date: None announced</p>
-        {{ end }}
-        <p><a href="{{ .Params.info }}" class="button">More info</a></p>
+          <p><a href="{{ .Params.info }}" class="button">More info</a></p>
+        </div>
       </article>
     {{ end }}
   </section>

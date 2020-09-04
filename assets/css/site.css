@@ -48,6 +48,17 @@
   margin-left: 1ch;
 }
 
+.experience {
+  align-items: flex-start;
+  display: flex;
+  padding: var(--step-0);
+}
+
+.photo {
+  border-radius: 1em;
+  margin-right: var(--step-0);
+}
+
 /**
  * Exception styles
  */
