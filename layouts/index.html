@@ -33,7 +33,8 @@
             <figcaption>Image credit: <a href="{{ .Params.link }}">{{ .Params.author }}</a></figcaption>
           </figure>
         {{ end }}
-        <div>
+        <div class="flow">
+          {{ .Content }}
           {{ with .Params.opendate }}
             {{ $prefix := "Opening date" }}
             {{ if gt (time .) now }}
@@ -48,7 +49,7 @@
       </article>
     {{ end }}
   </section>
-  <footer>
+  <footer class="flow">
     {{ with .Site.GetPage "/disclaimer" }}
       {{ .Content }}
     {{ end }}

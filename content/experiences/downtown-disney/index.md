@@ -14,3 +14,5 @@ resources:
     link: https://commons.wikimedia.org/wiki/File:Downtown_Disney_2014_Fountain_Build_a_Bear.JPG
 ---
 
+Restrictions in place. Limited parking, reduced hours, outdoor dining only. Some shops or restaurants may not be available.
+

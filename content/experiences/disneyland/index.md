@@ -13,3 +13,5 @@ resources:
     link: https://commons.wikimedia.org/wiki/File:Sleeping_Beauty_Castle_2019.jpg
 ---
 
+You might get a peek through the front gate, but that's it.
+

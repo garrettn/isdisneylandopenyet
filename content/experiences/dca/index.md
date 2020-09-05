@@ -13,3 +13,4 @@ resources:
     link: https://commons.wikimedia.org/wiki/File:Pixarpiersunset2019_(cropped).jpg
 ---
 
+Enjoy taking a selfie in front of the gate!
