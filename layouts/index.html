@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ .Title }}</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
-  {{ $cssReset := resources.Get "css/reset.css" }}
+  {{ template "_internal/opengraph.html" . -}}
+  {{ template "_internal/schema.html" . -}}
+  {{ template "_internal/twitter_cards.html" . -}}
+  {{ $cssReset := resources.Get "css/reset.css" -}}
   <link rel="stylesheet" href="{{ $cssReset.RelPermalink }}">
-  {{ $cssBase := resources.Get "css/base.css" }}
+  {{ $cssBase := resources.Get "css/base.css" -}}
   <link rel="stylesheet" href="{{ $cssBase.RelPermalink }}">
-  {{ $cssSite := resources.Get "css/site.css" }}
+  {{ $cssSite := resources.Get "css/site.css" -}}
   <link rel="stylesheet" href="{{ $cssSite.RelPermalink }}">
 </head>
 <body>
   <section class="overview" data-status="{{ anchorize .Params.status }}">
     <h1>{{ .Title }}</h1>
-    <p class="summary">{{ .Summary }}</p>
+    <p class="summary">{{ .Description }}</p>
     {{ $iconChevron := resources.Get "icons/chevron-down.svg" }}
     <a href="#details" class="details-link | button">
       See details
@@ -54,7 +57,7 @@
       {{ .Content }}
     {{ end }}
     <p class="meta-info">
-      Last updated {{ now.Format "Jan 2, 2006" }}.
+      Last updated {{ .Date.Format "Jan 2, 2006" }}.
       <a href="{{ .Site.Params.repo }}">View source</a>.
     </p>
   </footer>
