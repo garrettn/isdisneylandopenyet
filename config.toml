@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Is Disneyland open yet?"
 disableKinds = ["RSS", "section", "taxonomy", "term"]
+enableRobotsTXT = true
 
 [params]
   repo = "https://github.com/garrettn/isdisneylandopenyet"
