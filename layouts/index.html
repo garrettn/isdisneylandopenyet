@@ -32,7 +32,7 @@
         <p class="status">{{ .Params.status }}</h2>
         {{ with .Resources.GetMatch "photo" }}
           <figure class="photo">
-            <img src="{{ .Permalink }}" alt="{{ .Title }}">
+            <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
             <figcaption>Image credit: <a href="{{ .Params.link }}">{{ .Params.author }}</a></figcaption>
           </figure>
         {{ end }}
