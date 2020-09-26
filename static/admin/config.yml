@@ -34,4 +34,23 @@ collections:
       - name: body
         label: Body
         widget: markdown
-
+  - name: overview
+    label: Overview
+    files:
+      - label: Main
+        name: main
+        file: content/_index.md
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: description
+            label: Description
+            widget: string
+          - name: status
+            label: Status
+            options: ["closed", "partially open", "open"]
+          - name: date
+            label: Updated
+            widget: date
+            format: YYYY-MM-DD
