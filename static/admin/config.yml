@@ -23,6 +23,10 @@ collections:
         widget: number
         value: int
         comment: Lower comes first.
+      - name: status
+        label: Status
+        widget: select
+        options: ["closed", "partially open", "open"]
       - name: info
         label: Info URL
         widget: string
