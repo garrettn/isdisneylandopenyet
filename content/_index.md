@@ -1,8 +1,8 @@
 ---
 title: Is Disneyland open yet?
-description: Sort of, not really
+description: Not yet, but soon!
 status: partially open
-date: 2020-11-19
+date: 2021-04-14
 images:
   - experiences/disneyland/sleeping-beauty-castle.jpg
 ---
