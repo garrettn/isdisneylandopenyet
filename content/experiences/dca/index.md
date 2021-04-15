@@ -14,4 +14,4 @@ resources:
     link: https://commons.wikimedia.org/wiki/File:Pixarpiersunset2019_(cropped).jpg
 ---
 
-Buena Vista Street is open for shopping! But don't expect to ride any rides.
+Enjoy A Touch of Disney through April 19, and get ready for the real reopening on April 30!
