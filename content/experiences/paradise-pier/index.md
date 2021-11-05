@@ -2,7 +2,8 @@
 title: "Disney’s Paradise Pier Hotel"
 date: 2020-09-02T22:29:30-06:00
 weight: 6
-status: closed
+status: open
+opendate: 2021-06-15
 info: https://disneyland.disney.go.com/hotels/paradise-pier-hotel/
 resources:
 - name: photo
@@ -13,3 +14,4 @@ resources:
     link: https://commons.wikimedia.org/wiki/File:Paradise_Pier_Hotel_2014.jpg
 ---
 
+Ready for you!

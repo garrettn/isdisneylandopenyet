@@ -15,4 +15,4 @@ resources:
       author: Patrick Pelletier
       link: https://commons.wikimedia.org/wiki/File:Downtown_Disney_2014_Fountain_Build_a_Bear.JPG
 ---
-Restrictions in place. Limited parking, reduced hours and capacity, reduced indoor dining. Some shops or restaurants may not be available.
+Some services may be reduced or unavailable.
